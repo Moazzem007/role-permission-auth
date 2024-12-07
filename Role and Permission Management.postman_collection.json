@@ -1,0 +1,484 @@
+{
+	"info": {
+		"_postman_id": "356bdf53-691e-4a7d-abe1-544fac3b049f",
+		"name": "Role and Permission Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30453077"
+	},
+	"item": [
+		{
+			"name": "User Management",
+			"item": [
+				{
+					"name": "Roles",
+					"item": [
+						{
+							"name": "Get Roles",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU5MmU4YWY4ZWMzOTYzMjZlZTI3YjA3ODcwNjI4ODcxZDc2MTYxZGFjNjk4ZDU4NTdhMmIwMTQzNDUzYTljOWI4OTk2YmYwMTczOWQ0YjgiLCJpYXQiOjE3MzM1Njk4MzYuNTA3OTMxLCJuYmYiOjE3MzM1Njk4MzYuNTA3OTMzLCJleHAiOjE3NjUxMDU4MzYuNTA2NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ng3LstGnjBkrZaobypYbLoHh71_4Y4SpKTsAO0NM5kTCcaRUP-i_g_9zeL_eVVrSi-94tPRIzwGsggS-h_7J2bmd6fedDbHuU1BdbXmkoLUFfc59lg3ck-PdDz39UHeEEm0b7xnBuOq3i2Cx4zuLLLuk5pMpbFcUDB_KaX0ZfcPMmjMJzW_JbM1IaLe1TiDxNsrbBog9ir2vh76kaFu2ASgb43uFJj6_46F87eHtgRVYQ3iV61VAC1-CK62KIB6xmngSSjSPN0_fVSz352JIOB0d1GxmuvOMJc49kNAttNvplRsOLmLIl3rZgI8YQUEc9Etq1C9vFs4uzHW0QuAf15GdMuPnQGOGSZJWz3PuJ1nUiQjSuSHmcuM1gDrbur7davbXSDZXhFuJe5rfqfq59IxWLRi5hKndD6cOea-oMH1nMyrWKajVCUxFk30Kg16IfgazsItk7hkcWmCsau8egejIBlZWi420n6BXnrMbhG5nWZsrTOjX6uu8taqA4wj7y2rvLS9HpegR6X5Y6uBDR3k7hEg33EpzlM5okizbRrOH0qYJ9RFLJUO9WMo-rj-4hfFc3_rScQoi25VhrtA2xkGIdVxmDh0LFpq87z9slQBiy0NKvCBAEE4gI-cHI7P9AGaTpi-2fqxwOlk6rLCQXYDZY2RUCTyWMT96sIah0_k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost/role-permission-auth/public/api/roles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"role-permission-auth",
+										"public",
+										"api",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Role",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU5MmU4YWY4ZWMzOTYzMjZlZTI3YjA3ODcwNjI4ODcxZDc2MTYxZGFjNjk4ZDU4NTdhMmIwMTQzNDUzYTljOWI4OTk2YmYwMTczOWQ0YjgiLCJpYXQiOjE3MzM1Njk4MzYuNTA3OTMxLCJuYmYiOjE3MzM1Njk4MzYuNTA3OTMzLCJleHAiOjE3NjUxMDU4MzYuNTA2NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ng3LstGnjBkrZaobypYbLoHh71_4Y4SpKTsAO0NM5kTCcaRUP-i_g_9zeL_eVVrSi-94tPRIzwGsggS-h_7J2bmd6fedDbHuU1BdbXmkoLUFfc59lg3ck-PdDz39UHeEEm0b7xnBuOq3i2Cx4zuLLLuk5pMpbFcUDB_KaX0ZfcPMmjMJzW_JbM1IaLe1TiDxNsrbBog9ir2vh76kaFu2ASgb43uFJj6_46F87eHtgRVYQ3iV61VAC1-CK62KIB6xmngSSjSPN0_fVSz352JIOB0d1GxmuvOMJc49kNAttNvplRsOLmLIl3rZgI8YQUEc9Etq1C9vFs4uzHW0QuAf15GdMuPnQGOGSZJWz3PuJ1nUiQjSuSHmcuM1gDrbur7davbXSDZXhFuJe5rfqfq59IxWLRi5hKndD6cOea-oMH1nMyrWKajVCUxFk30Kg16IfgazsItk7hkcWmCsau8egejIBlZWi420n6BXnrMbhG5nWZsrTOjX6uu8taqA4wj7y2rvLS9HpegR6X5Y6uBDR3k7hEg33EpzlM5okizbRrOH0qYJ9RFLJUO9WMo-rj-4hfFc3_rScQoi25VhrtA2xkGIdVxmDh0LFpq87z9slQBiy0NKvCBAEE4gI-cHI7P9AGaTpi-2fqxwOlk6rLCQXYDZY2RUCTyWMT96sIah0_k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "new_role",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/role-permission-auth/public/api/roles",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"role-permission-auth",
+										"public",
+										"api",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Role",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU5MmU4YWY4ZWMzOTYzMjZlZTI3YjA3ODcwNjI4ODcxZDc2MTYxZGFjNjk4ZDU4NTdhMmIwMTQzNDUzYTljOWI4OTk2YmYwMTczOWQ0YjgiLCJpYXQiOjE3MzM1Njk4MzYuNTA3OTMxLCJuYmYiOjE3MzM1Njk4MzYuNTA3OTMzLCJleHAiOjE3NjUxMDU4MzYuNTA2NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ng3LstGnjBkrZaobypYbLoHh71_4Y4SpKTsAO0NM5kTCcaRUP-i_g_9zeL_eVVrSi-94tPRIzwGsggS-h_7J2bmd6fedDbHuU1BdbXmkoLUFfc59lg3ck-PdDz39UHeEEm0b7xnBuOq3i2Cx4zuLLLuk5pMpbFcUDB_KaX0ZfcPMmjMJzW_JbM1IaLe1TiDxNsrbBog9ir2vh76kaFu2ASgb43uFJj6_46F87eHtgRVYQ3iV61VAC1-CK62KIB6xmngSSjSPN0_fVSz352JIOB0d1GxmuvOMJc49kNAttNvplRsOLmLIl3rZgI8YQUEc9Etq1C9vFs4uzHW0QuAf15GdMuPnQGOGSZJWz3PuJ1nUiQjSuSHmcuM1gDrbur7davbXSDZXhFuJe5rfqfq59IxWLRi5hKndD6cOea-oMH1nMyrWKajVCUxFk30Kg16IfgazsItk7hkcWmCsau8egejIBlZWi420n6BXnrMbhG5nWZsrTOjX6uu8taqA4wj7y2rvLS9HpegR6X5Y6uBDR3k7hEg33EpzlM5okizbRrOH0qYJ9RFLJUO9WMo-rj-4hfFc3_rScQoi25VhrtA2xkGIdVxmDh0LFpq87z9slQBiy0NKvCBAEE4gI-cHI7P9AGaTpi-2fqxwOlk6rLCQXYDZY2RUCTyWMT96sIah0_k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "tast_role_update",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/role-permission-auth/public/api/roles/3?_method=PUT",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"role-permission-auth",
+										"public",
+										"api",
+										"roles",
+										"3"
+									],
+									"query": [
+										{
+											"key": "_method",
+											"value": "PUT"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Assign Role to User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU5MmU4YWY4ZWMzOTYzMjZlZTI3YjA3ODcwNjI4ODcxZDc2MTYxZGFjNjk4ZDU4NTdhMmIwMTQzNDUzYTljOWI4OTk2YmYwMTczOWQ0YjgiLCJpYXQiOjE3MzM1Njk4MzYuNTA3OTMxLCJuYmYiOjE3MzM1Njk4MzYuNTA3OTMzLCJleHAiOjE3NjUxMDU4MzYuNTA2NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ng3LstGnjBkrZaobypYbLoHh71_4Y4SpKTsAO0NM5kTCcaRUP-i_g_9zeL_eVVrSi-94tPRIzwGsggS-h_7J2bmd6fedDbHuU1BdbXmkoLUFfc59lg3ck-PdDz39UHeEEm0b7xnBuOq3i2Cx4zuLLLuk5pMpbFcUDB_KaX0ZfcPMmjMJzW_JbM1IaLe1TiDxNsrbBog9ir2vh76kaFu2ASgb43uFJj6_46F87eHtgRVYQ3iV61VAC1-CK62KIB6xmngSSjSPN0_fVSz352JIOB0d1GxmuvOMJc49kNAttNvplRsOLmLIl3rZgI8YQUEc9Etq1C9vFs4uzHW0QuAf15GdMuPnQGOGSZJWz3PuJ1nUiQjSuSHmcuM1gDrbur7davbXSDZXhFuJe5rfqfq59IxWLRi5hKndD6cOea-oMH1nMyrWKajVCUxFk30Kg16IfgazsItk7hkcWmCsau8egejIBlZWi420n6BXnrMbhG5nWZsrTOjX6uu8taqA4wj7y2rvLS9HpegR6X5Y6uBDR3k7hEg33EpzlM5okizbRrOH0qYJ9RFLJUO9WMo-rj-4hfFc3_rScQoi25VhrtA2xkGIdVxmDh0LFpq87z9slQBiy0NKvCBAEE4gI-cHI7P9AGaTpi-2fqxwOlk6rLCQXYDZY2RUCTyWMT96sIah0_k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "role",
+											"value": "Admin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/role-permission-auth/public/api/users/1/assign-role",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"role-permission-auth",
+										"public",
+										"api",
+										"users",
+										"1",
+										"assign-role"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Permissions",
+					"item": [
+						{
+							"name": "Get all Permissions",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU5MmU4YWY4ZWMzOTYzMjZlZTI3YjA3ODcwNjI4ODcxZDc2MTYxZGFjNjk4ZDU4NTdhMmIwMTQzNDUzYTljOWI4OTk2YmYwMTczOWQ0YjgiLCJpYXQiOjE3MzM1Njk4MzYuNTA3OTMxLCJuYmYiOjE3MzM1Njk4MzYuNTA3OTMzLCJleHAiOjE3NjUxMDU4MzYuNTA2NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ng3LstGnjBkrZaobypYbLoHh71_4Y4SpKTsAO0NM5kTCcaRUP-i_g_9zeL_eVVrSi-94tPRIzwGsggS-h_7J2bmd6fedDbHuU1BdbXmkoLUFfc59lg3ck-PdDz39UHeEEm0b7xnBuOq3i2Cx4zuLLLuk5pMpbFcUDB_KaX0ZfcPMmjMJzW_JbM1IaLe1TiDxNsrbBog9ir2vh76kaFu2ASgb43uFJj6_46F87eHtgRVYQ3iV61VAC1-CK62KIB6xmngSSjSPN0_fVSz352JIOB0d1GxmuvOMJc49kNAttNvplRsOLmLIl3rZgI8YQUEc9Etq1C9vFs4uzHW0QuAf15GdMuPnQGOGSZJWz3PuJ1nUiQjSuSHmcuM1gDrbur7davbXSDZXhFuJe5rfqfq59IxWLRi5hKndD6cOea-oMH1nMyrWKajVCUxFk30Kg16IfgazsItk7hkcWmCsau8egejIBlZWi420n6BXnrMbhG5nWZsrTOjX6uu8taqA4wj7y2rvLS9HpegR6X5Y6uBDR3k7hEg33EpzlM5okizbRrOH0qYJ9RFLJUO9WMo-rj-4hfFc3_rScQoi25VhrtA2xkGIdVxmDh0LFpq87z9slQBiy0NKvCBAEE4gI-cHI7P9AGaTpi-2fqxwOlk6rLCQXYDZY2RUCTyWMT96sIah0_k",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost/role-permission-auth/public/api/permissions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"role-permission-auth",
+										"public",
+										"api",
+										"permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Permission",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU5MmU4YWY4ZWMzOTYzMjZlZTI3YjA3ODcwNjI4ODcxZDc2MTYxZGFjNjk4ZDU4NTdhMmIwMTQzNDUzYTljOWI4OTk2YmYwMTczOWQ0YjgiLCJpYXQiOjE3MzM1Njk4MzYuNTA3OTMxLCJuYmYiOjE3MzM1Njk4MzYuNTA3OTMzLCJleHAiOjE3NjUxMDU4MzYuNTA2NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ng3LstGnjBkrZaobypYbLoHh71_4Y4SpKTsAO0NM5kTCcaRUP-i_g_9zeL_eVVrSi-94tPRIzwGsggS-h_7J2bmd6fedDbHuU1BdbXmkoLUFfc59lg3ck-PdDz39UHeEEm0b7xnBuOq3i2Cx4zuLLLuk5pMpbFcUDB_KaX0ZfcPMmjMJzW_JbM1IaLe1TiDxNsrbBog9ir2vh76kaFu2ASgb43uFJj6_46F87eHtgRVYQ3iV61VAC1-CK62KIB6xmngSSjSPN0_fVSz352JIOB0d1GxmuvOMJc49kNAttNvplRsOLmLIl3rZgI8YQUEc9Etq1C9vFs4uzHW0QuAf15GdMuPnQGOGSZJWz3PuJ1nUiQjSuSHmcuM1gDrbur7davbXSDZXhFuJe5rfqfq59IxWLRi5hKndD6cOea-oMH1nMyrWKajVCUxFk30Kg16IfgazsItk7hkcWmCsau8egejIBlZWi420n6BXnrMbhG5nWZsrTOjX6uu8taqA4wj7y2rvLS9HpegR6X5Y6uBDR3k7hEg33EpzlM5okizbRrOH0qYJ9RFLJUO9WMo-rj-4hfFc3_rScQoi25VhrtA2xkGIdVxmDh0LFpq87z9slQBiy0NKvCBAEE4gI-cHI7P9AGaTpi-2fqxwOlk6rLCQXYDZY2RUCTyWMT96sIah0_k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "test_permission",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/role-permission-auth/public/api/permissions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"role-permission-auth",
+										"public",
+										"api",
+										"permissions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Permission",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU5MmU4YWY4ZWMzOTYzMjZlZTI3YjA3ODcwNjI4ODcxZDc2MTYxZGFjNjk4ZDU4NTdhMmIwMTQzNDUzYTljOWI4OTk2YmYwMTczOWQ0YjgiLCJpYXQiOjE3MzM1Njk4MzYuNTA3OTMxLCJuYmYiOjE3MzM1Njk4MzYuNTA3OTMzLCJleHAiOjE3NjUxMDU4MzYuNTA2NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ng3LstGnjBkrZaobypYbLoHh71_4Y4SpKTsAO0NM5kTCcaRUP-i_g_9zeL_eVVrSi-94tPRIzwGsggS-h_7J2bmd6fedDbHuU1BdbXmkoLUFfc59lg3ck-PdDz39UHeEEm0b7xnBuOq3i2Cx4zuLLLuk5pMpbFcUDB_KaX0ZfcPMmjMJzW_JbM1IaLe1TiDxNsrbBog9ir2vh76kaFu2ASgb43uFJj6_46F87eHtgRVYQ3iV61VAC1-CK62KIB6xmngSSjSPN0_fVSz352JIOB0d1GxmuvOMJc49kNAttNvplRsOLmLIl3rZgI8YQUEc9Etq1C9vFs4uzHW0QuAf15GdMuPnQGOGSZJWz3PuJ1nUiQjSuSHmcuM1gDrbur7davbXSDZXhFuJe5rfqfq59IxWLRi5hKndD6cOea-oMH1nMyrWKajVCUxFk30Kg16IfgazsItk7hkcWmCsau8egejIBlZWi420n6BXnrMbhG5nWZsrTOjX6uu8taqA4wj7y2rvLS9HpegR6X5Y6uBDR3k7hEg33EpzlM5okizbRrOH0qYJ9RFLJUO9WMo-rj-4hfFc3_rScQoi25VhrtA2xkGIdVxmDh0LFpq87z9slQBiy0NKvCBAEE4gI-cHI7P9AGaTpi-2fqxwOlk6rLCQXYDZY2RUCTyWMT96sIah0_k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "test_permission_update",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/role-permission-auth/public/api/permissions/8?_method=PUT",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"role-permission-auth",
+										"public",
+										"api",
+										"permissions",
+										"8"
+									],
+									"query": [
+										{
+											"key": "_method",
+											"value": "PUT"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Assign Permission to Role",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMDU5MmU4YWY4ZWMzOTYzMjZlZTI3YjA3ODcwNjI4ODcxZDc2MTYxZGFjNjk4ZDU4NTdhMmIwMTQzNDUzYTljOWI4OTk2YmYwMTczOWQ0YjgiLCJpYXQiOjE3MzM1Njk4MzYuNTA3OTMxLCJuYmYiOjE3MzM1Njk4MzYuNTA3OTMzLCJleHAiOjE3NjUxMDU4MzYuNTA2NDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ng3LstGnjBkrZaobypYbLoHh71_4Y4SpKTsAO0NM5kTCcaRUP-i_g_9zeL_eVVrSi-94tPRIzwGsggS-h_7J2bmd6fedDbHuU1BdbXmkoLUFfc59lg3ck-PdDz39UHeEEm0b7xnBuOq3i2Cx4zuLLLuk5pMpbFcUDB_KaX0ZfcPMmjMJzW_JbM1IaLe1TiDxNsrbBog9ir2vh76kaFu2ASgb43uFJj6_46F87eHtgRVYQ3iV61VAC1-CK62KIB6xmngSSjSPN0_fVSz352JIOB0d1GxmuvOMJc49kNAttNvplRsOLmLIl3rZgI8YQUEc9Etq1C9vFs4uzHW0QuAf15GdMuPnQGOGSZJWz3PuJ1nUiQjSuSHmcuM1gDrbur7davbXSDZXhFuJe5rfqfq59IxWLRi5hKndD6cOea-oMH1nMyrWKajVCUxFk30Kg16IfgazsItk7hkcWmCsau8egejIBlZWi420n6BXnrMbhG5nWZsrTOjX6uu8taqA4wj7y2rvLS9HpegR6X5Y6uBDR3k7hEg33EpzlM5okizbRrOH0qYJ9RFLJUO9WMo-rj-4hfFc3_rScQoi25VhrtA2xkGIdVxmDh0LFpq87z9slQBiy0NKvCBAEE4gI-cHI7P9AGaTpi-2fqxwOlk6rLCQXYDZY2RUCTyWMT96sIah0_k",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "permission",
+											"value": "assign_roles",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/role-permission-auth/public/api/roles/2/assign-permission",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"role-permission-auth",
+										"public",
+										"api",
+										"roles",
+										"2",
+										"assign-permission"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTE2MzUwZTAyNTRmMTA5ZGZjNWJkMTEwNGNjYTBmOTQyMjMxNWI5NjA0ZWNmMmVmNTNkZTRkNmNjNTcxZTk0NDA5ZmZjOGNiMmM3Mzk4NjYiLCJpYXQiOjE3MzM1NzM0NjAuMTc3MTIsIm5iZiI6MTczMzU3MzQ2MC4xNzcxMjMsImV4cCI6MTc2NTEwOTQ2MC4xNzU0NTEsInN1YiI6IjIiLCJzY29wZXMiOltdfQ.mnP4ZqbCuKdduizmJ4cbsS5AfaBicCuxKMduZGkZtBrqFFLjiNSg_LrFghFLutmhZDG563aSgn5hDNyc7XmVff8muZSmVdnBFjQRM9iCZwc_HXZZ8EwW81hIKsYkSXCYK3L172N-VS1vHxzhMKSizzQWJbI5lFDZchGTn9otQYQMS9A8kb50kWaSHhnaPXMq4Ilhbws9QWpwXoI6EShYQEzOxZzeq8zirA6rNTiHbW6hSjf0df4q_c2UicI7r5JwYhlpeGSXv7lyCMLKz_9D8IKWzWyAvyoCm8hYgu4sEnRTtj1uLY0FPRptMP2SIqkeYSwcilFReo4EugKyUBTZxoHIoC_YpRTFUYgY-Kp-HiehzTEFSwcuOSKTidMP-DA0Xk4jvgCZ1S02B1gtJfAtancVnmpsozB1OrWfLnPHhtC8QJmpwgTcf3Dqnem8XyM91lnzpBXSnDCe_V16mJVgVekOgsBtlK6SK5o8uK1wVVd2JiRS0Jos9C4mgX9BJP5CvUpcPLto8KFuGEuUfw4t3Zy0ON-dUYOQM4M419kUZjeORKIFMtl7xwEtBBjw0yE_0mQpLDmVcU6vXFMJ04J_Dit6taYKii8PfKpk6LmJReNTArzG3DrP2hOgAhmruB6Ja6uN1LuV3YZIoV1u7GFJ8xJVAvj-BnNXsVfD0IMy5S8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/role-permission-auth/public/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"role-permission-auth",
+								"public",
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "moazzem@atilimited.net",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/role-permission-auth/public/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"role-permission-auth",
+								"public",
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Moazzem Hossain",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "moazzem@atilimited.net",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/role-permission-auth/public/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"role-permission-auth",
+								"public",
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
