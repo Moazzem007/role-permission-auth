@@ -13,7 +13,7 @@ This project is a RESTful API developed using **Laravel** to manage **users**, *
 Follow the tutorial and the steps below to set up and run the application on your local machine.
 
 ### Project Setup Tutorial
-https://github.com/user-attachments/assets/fb997023-7ddd-40b8-9292-94d5ad5acfa6
+https://github.com/user-attachments/assets/31ee1d10-3ac0-496e-8690-07b71cadbf0d
 
 ### 1. Clone the Repository
 First, clone the repository to your local machine:
@@ -62,9 +62,13 @@ php artisan key:generate
 php artisan serve
 ```
 
+## Project Structure Overview
+https://github.com/user-attachments/assets/a3fe092f-dbee-4543-a849-c698cc2995b7
+
 
 
 ## Application Process Flow
+
 
 ### 1. User Authentication
 - **User Registration**: A user can register by providing their name, email, and password.
@@ -95,6 +99,8 @@ php artisan serve
 #### Dummy Admin: `moazzem@atilimited.net`
 #### Dummy Password: `12345678`
 
+#### Postman Process Flow
+https://github.com/user-attachments/assets/ae9ed9ce-f53a-4222-9bbe-51d26eed9539
 #### 1. Register User
 - **Endpoint**: `POST /api/register`
 - **Body**:
